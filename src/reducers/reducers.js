@@ -15,3 +15,12 @@ export var authReducer = (state = {}, action) => {
 			return state;
 	};
 }
+
+export var uploadReducer = (state = {}, action) => {
+	switch(action.type) {
+		case 'BEGIN_IMAGE_UPLOAD':
+		 return state;
+		default:
+			return state;
+	};
+}

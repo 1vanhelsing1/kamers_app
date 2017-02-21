@@ -18,3 +18,10 @@ export var logout = () => {
 	    type: 'LOGOUT'
 	}
 }
+
+export var beginImageUpload = (file) => {
+	return {
+			type: 'BEGIN_IMAGE_UPLOAD',
+			file: file
+	}
+}

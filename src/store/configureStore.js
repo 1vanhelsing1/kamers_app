@@ -2,7 +2,7 @@ import * as redux from 'redux';
 import rootSaga from '../sagas/sagas'
 
 //import reducers here
-import {makersReducer, authReducer} from '../reducers/reducers';
+import {makersReducer, authReducer, uploadReducer} from '../reducers/reducers';
 import createSagaMiddleware from 'redux-saga';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -12,7 +12,8 @@ export var configure = (initialState = {}) => {
 
   var reducer = redux.combineReducers({
     makers: makersReducer,
-    auth: authReducer
+    auth: authReducer,
+    uploads: uploadReducer,
   });
 
   var store = redux.createStore(reducer, initialState, redux.compose(
